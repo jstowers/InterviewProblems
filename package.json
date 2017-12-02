@@ -1,0 +1,15 @@
+{
+  "name": "InterviewProblems",
+  "version": "1.0.0",
+  "created": "December 2, 2017",
+  "description": "Problems to prepare for job interviews.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joseph Stowers",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^21.2.1"
+  }
+}
