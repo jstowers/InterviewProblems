@@ -15,18 +15,21 @@
 
 function chunk(array, size) {
 
-	// create empty result array
+	// create empty result array, whose elements (chunks)
+	// will be arrays of length size
 	const chunked = [];
 
 	for (let element of array) {
 
-		// get last element in chunked array
+		// get last array element [] (or "chunk") in chunked []
 		const last = chunked[chunked.length - 1];
 
+		// test to push new chunk [] into chunked []
 		if (!last || last.length === size) {
 			chunked.push([element]);
 		} else {
-			// have a chunk, but not yet full
+			// have a chunk, but not yet full, then
+			// push the current element into the last chunk
 			last.push(element);
 		}
 	}
@@ -35,47 +38,6 @@ function chunk(array, size) {
 
 }
 
-console.log(chunk([1,2,3,4],2));
-
-
-
-/*
-	SCRAP CODE
-
-	
-
-	}
-
-	for (let i = 0; i < array.length; i++) {
-
-		if (chunked[i] === undefined || chunked[i].length === size) {
-
-			chunked[i].push(array[i]);
-
-		} else chunked.push(array[i]);
-	}
-
-
-
-	// if array length < size, return array
-	if (array.length < size) {
-		result.push(array);
-	}
-
-	// determine number of sub arrays
-	let numSubArr;
-	if (array.length % size != 0) {
-		numSubArr = array.length / size + 1
-	} else numSubArr = array.length / size;
-
-	for (int i = 0; i < size-1; i++) {
-		for (int j = 0; j < array.length; j++) {
-			result[i].push(arr[j])
-		}
-	}
-
-	return result;
-}
-*/
+// console.log(chunk([1,2,3,4],2));
 
 module.exports = chunk;
