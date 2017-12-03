@@ -9,7 +9,7 @@
 	the same backward as forward.  The word derives from the Greek ‘palin,’ 
 	or “back” and ‘dromos,’ or "direction."
 
-	Example:
+	EXAMPLES:
 	  	palindrome("abba")    => true
 	  	palindrome("racecar") => true
 	  	palindrome(" abba")   => false
