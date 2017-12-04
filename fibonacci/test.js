@@ -27,3 +27,7 @@ test('calculates correct fib value for 4', () => {
 test('calculates correct fib value for 39', () => {
   	expect(fib(39)).toEqual(63245986);
 });
+
+test('calculates correct fib value for 90', () => {
+  	expect(fib(90)).toEqual(2880067194370816120);
+});
