@@ -44,7 +44,7 @@ function fib(n) {
 // 					Recursive Solution
 // --------------------------------------------------------
 
-function slowFib(n) {
+function fib(n) {
 
 	// base case
 	if (n < 2) {
@@ -99,11 +99,11 @@ function memoize(fn) {
 		const result = fn.apply(this, args);
 		cache[args] = result;
 		
-		console.log('cache =', cache);
+		// console.log('cache =', cache);
 		return result;
 	}
 }
 
-const fib = memoize(slowFib);
+fib = memoize(fib);
 
 module.exports = fib;

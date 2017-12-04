@@ -1,4 +1,4 @@
-# InterviewProblems
+# Interview Problems
 
 December 2, 2017
 - Palindrome
