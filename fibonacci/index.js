@@ -17,18 +17,32 @@
 */
 
 
-// Recursive Solution
+// --------------------------------------------------------
+// 					Iterative Solution
+// --------------------------------------------------------
+
 /*
 function fib(n) {
 
-	// base case
-	if (n < 2) {
-		return n;
+	const result = [0, 1];
+
+	for (let i = 2; i <= n; i++) {
+		result.push(result[i-1] + result[i-2])
 	}
 
-	return (fib(n-2) + fib(n-1));
+	return result[n];
 }
 */
+
+/*
+	Time Complexity:
+	Linear time O(n) => as n increases by 1, we have to do one more calculation.
+*/
+
+
+// --------------------------------------------------------
+// 					Recursive Solution
+// --------------------------------------------------------
 
 function slowFib(n) {
 
@@ -40,9 +54,33 @@ function slowFib(n) {
 	return (fib(n-2) + fib(n-1));
 }
 
+/*
+	Time Complexity:
+	Exponential time => for each additional number in the series, we
+	add a significant number of function calls.
+*/
 
+/*
 
-// takes a slow function and returns a faster version
+	Can we improve the runtime of this recursive algorithm?
+	
+	YES.  Memoization!!
+
+	For instance, for fib(6), the function fib(3) is called twice.  
+	What if we save the value of fib(3) when it is called the first time,
+	so when it is called again, we just return the pre-computed value?
+	
+	Memoization - store the arguments of a function call along with the result.
+	If the function is called again with the same arguments, return pre-computed
+	result instead of running the function again.
+
+	calling a function with a function and returning a function:
+
+		slowFib ==> memoize ==> turbo-charged Fib
+*/
+
+// 	memoize()
+// 	takes a slow function and returns a faster version
 function memoize(fn) {
 
 	// storage object that holds all previous
@@ -67,53 +105,5 @@ function memoize(fn) {
 }
 
 const fib = memoize(slowFib);
-
-
-
-// Time Complexity
-// Exponential time => for each additional number in the series, we
-// add a significant number of function calls.
-
-/*
-
-	Can we improve the runtime of this recursive algorithm?
-	
-	YES.  Memoization!!
-
-	For instance, for fib(6), the function fib(3) is called twice.  
-	What if we save the value of fib(3) when it is called the first time,
-	so when it is called again, we just return the pre-computed value?
-	
-	Memoization - store the arguments of a function call along with the result.
-	If the function is called again with the same arguments, return pre-computed
-	result instead of running the function again.
-
-	fib(50) runtime before memoization = 
-	fib(50) runtime after memoziation  =
-
-
-	calling a function with a function and returning a function:
-
-*/
-
-
-/*
-// Iterative Solution
-function fib(n) {
-
-	const result = [0, 1];
-
-	for (let i = 2; i <= n; i++) {
-		result.push(result[i-1] + result[i-2])
-	}
-
-	return result[n];
-}
-*/
-
-
-// Time Complexity
-// As n increases by 1, we have to do one more calculation
-// Linear runtime => O(n)
 
 module.exports = fib;
