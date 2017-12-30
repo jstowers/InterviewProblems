@@ -1,5 +1,5 @@
 // Anagrams
-// December 22, 2017
+// December 30, 2017
 
 /*
   GOAL: Check to see if two strings are anagrams of each other.
@@ -16,15 +16,12 @@
 */
 
 //  Solution #1 => uses JavaScript array sort() method
+//  returns true if strings are equal
 function anagrams(stringA, stringB) {
     stringA = cleanString(stringA).split('').sort().join('');
     stringB = cleanString(stringB).split('').sort().join('');
-
-    if (stringA === stringB) {
-        return true;
-    } else return false;
+    return stringA === stringB;
 }
-
 
 /*  Solution #2 => uses a character map
 function anagrams(stringA, stringB) {
