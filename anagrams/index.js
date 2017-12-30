@@ -7,8 +7,8 @@
   An anagram is a string that contains the same characters in the same quantity
   as another string.
 
-  Only consider characters, not spaces or punctuation.  Count capital letters
-  the same as lowercase letters.
+  Only consider characters, not spaces or punctuation.
+  Convert capital letters to lowercase.
 
   EXAMPLES:
     anagrams('rail safety', 'fairy tales') => true
@@ -21,6 +21,13 @@ function anagrams(stringA, stringB) {
     stringA = cleanString(stringA).split('').sort().join('');
     stringB = cleanString(stringB).split('').sort().join('');
     return stringA === stringB;
+}
+
+// cleanString() uses regex to remove spaces and punctuation
+// \w stands for word character. It matches any alphanumeric character
+// including the underscore; it is equivalent to [A-Za-z0-9_]
+function cleanString(string) {
+    return string.replace(/[^\w]/g,'').toLowerCase();
 }
 
 /*  Solution #2 => uses a character map
@@ -47,15 +54,6 @@ function anagrams(stringA, stringB) {
     return true;
 }
 
-*/
-
-// cleanString() uses regex to remove spaces and punctuation
-// \w matches any alphanumeric character including the underscore;
-// equivalent to [A-Za-z0-9_]
-function cleanString(string) {
-    return string.replace(/[^\w]/g,'').toLowerCase();
-}
-
 // buildCharMap() returns a character map object: { a:1, d:3, m:1 }
 function buildCharMap(array) {
     return array.reduce((accum, element) => {
@@ -68,5 +66,6 @@ function buildCharMap(array) {
         return accum;
     },{});
 }
+*/
 
 module.exports = anagrams;
