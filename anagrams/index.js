@@ -15,15 +15,52 @@
     anagrams('RAIL! SAFETY!', 'fairy tales') => true
 */
 
+//  Solution #1 => uses JavaScript array sort() method
+function anagrams(stringA, stringB) {
+    stringA = cleanString(stringA).split('').sort().join('');
+    stringB = cleanString(stringB).split('').sort().join('');
 
-// stringClean() uses regex to remove spaces and punctuation
-// \w matches any alphanumeric character including the underscore; equivalent to [A-Za-z0-9_]
-function stringClean(string) {
+    if (stringA === stringB) {
+        return true;
+    } else return false;
+}
+
+
+/*  Solution #2 => uses a character map
+function anagrams(stringA, stringB) {
+    stringA = cleanString(stringA);
+    stringB = cleanString(stringB);
+
+    // return false if string lengths do not equal
+    if (stringA.length != stringB.length) {
+        return false;
+    }
+
+    // for each string, use reduce to build a character map
+    let charMapA = buildCharMap(stringA.split(''));
+    let charMapB = buildCharMap(stringB.split(''));
+
+    // loop through charMap and compare character counts
+    for (char in charMapA) {
+        if (charMapA[char] != charMapB[char]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+*/
+
+// cleanString() uses regex to remove spaces and punctuation
+// \w matches any alphanumeric character including the underscore;
+// equivalent to [A-Za-z0-9_]
+function cleanString(string) {
     return string.replace(/[^\w]/g,'').toLowerCase();
 }
 
-// charMap() returns a character map object: { a:1, d:3, m:1 }
-function charMap(array) {
+// buildCharMap() returns a character map object: { a:1, d:3, m:1 }
+function buildCharMap(array) {
     return array.reduce((accum, element) => {
         // if char not in accum {}, adds char:1
         if (typeof accum[element] == 'undefined') {
@@ -33,32 +70,6 @@ function charMap(array) {
         }
         return accum;
     },{});
-}
-
-function anagrams(stringA, stringB) {
-    stringA = stringClean(stringA);
-    stringB = stringClean(stringB);
-
-    // return false if string lengths do not equal
-    if (stringA.length != stringB.length) {
-        return false;
-    }
-
-    // for each string, use reduce to build a character map
-    let charMapA = charMap(stringA.split(''));
-    let charMapB = charMap(stringB.split(''));
-
-    for (keyA in charMapA) {
-        for (keyB in charMapB) {
-            if (keyB === keyA) {
-                if (charMapB[keyB] != charMapA[keyA]) {
-                    return false;
-                }
-            }
-        }
-    }
-
-    return true;
 }
 
 module.exports = anagrams;

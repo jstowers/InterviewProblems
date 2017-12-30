@@ -12,6 +12,10 @@ test('"CREATIVE" is an anagram of "Reactive"', () => {
     expect(anagrams('CREATIVE', 'Reactive')).toBeTruthy();
 });
 
+test('"Eleven plus two" is an anagram of "Twelve plus one"', () => {
+    expect(anagrams('Eleven plus two', 'Twelve plus one')).toBeTruthy();
+});
+
 test('"Whoa! Hi!" is an anagram of "Hi! Whoa!"', () => {
     expect(anagrams('Whoa! Hi!', 'Hi! Whoa!')).toBeTruthy();
 });
