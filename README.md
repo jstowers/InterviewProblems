@@ -4,8 +4,10 @@ December 2, 2017
 - Palindrome
 - Array Chunk
 
-Used git rebase to pull the changes from the origin and rewind the HEAD
+Used git rebase to pull the changes from origin and rewind the HEAD:
+````
     git pull -r origin master
+````
 
 
 Tree Data Structure
