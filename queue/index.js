@@ -2,9 +2,11 @@
 // December 3, 2017
 // Joseph Stowers
 
-// Implement a queue
-
+// Implement a queue (FIFO)
 // relying upon an array to do the heavy lifting
+
+// [nth, . . . , 4th, 3rd, 2nd, 1st]
+
 class Queue {
 
 	// constructor automatically called when
@@ -24,3 +26,15 @@ class Queue {
 	}
 
 }
+
+
+// Alternative Implementation
+/*	[1st, 2nd, 3rd, 4th, . . . , nth]
+
+	Use push() to push into back of array
+
+	Use shift() to remove the 1st element of the array.
+*/
+
+
+	
