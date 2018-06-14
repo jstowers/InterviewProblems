@@ -1,3 +1,6 @@
+// June 13, 2018
+// 
+
 const maxChar = require('./index');
 
 test('maxChar function is defined', () => {

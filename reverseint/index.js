@@ -62,4 +62,6 @@ console.log('reverseInt(-90) =', reverseInt(-90));
 
 console.log('reverseInt(-19) =', reverseInt(-19));
 
+console.log('reverseInt(-5) =', reverseInt(-5));
+
 module.exports = reverseInt;

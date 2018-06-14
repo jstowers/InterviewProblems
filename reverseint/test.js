@@ -11,5 +11,5 @@ test('reverseInt function is defined', () => {
 });
 
 test('reverseInt handles 0 as an input', () => {
-	expect(reverseInt(0).toEqual(0);
-}
+	expect(reverseInt(0)).toEqual(0);
+});

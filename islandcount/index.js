@@ -19,6 +19,7 @@
  		should return 2
 */
 
+/*
 function getDimensions(array) {
 	let X = array[0].length;
 	let Y = array.length;
@@ -58,7 +59,6 @@ function islandCount(array) {
 
 	console.log('visited =', visited);
 
-	
 	for (let i = 0; i < array.length; i++) {
 
 		let tempCount = 0;
@@ -73,8 +73,6 @@ function islandCount(array) {
 			if (element === 1) {
 
 				// then visit each neighbor
-
-
 
 			} 
 
@@ -105,8 +103,6 @@ function islandCount(array) {
 
 		count += tempCount;
 	}
-
-	*/
 
 	return count;
 }

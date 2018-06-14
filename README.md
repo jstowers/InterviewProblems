@@ -1,8 +1,38 @@
 # Interview Problems
 
+This repository contains a collection of common interview problems:
+
+- anagrams
+- chunk
+- fibonacci
+- fizzbuzz
+- islandcount
+- matchbraces
+- maxchar
+- palindrome
+- queue
+- reverseint
+- tree
+    + breadth first
+    + depth first
+    + levelwidth
+
 December 2, 2017
 - Palindrome
 - Array Chunk
+
+### Jest Testing Framework ###
+Each problem includes a test suite written with Jest.
+
+To run the test suite for a given problem in its directory:
+````
+    $ jest <directory>/test.js --watch
+````
+
+Hit Ctrl + C to stop the Jest test runner.
+
+
+### Git Rebase ###
 
 Used git rebase to pull the changes from origin and rewind the HEAD:
 ````

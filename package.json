@@ -10,6 +10,6 @@
   "author": "Joseph Stowers",
   "license": "ISC",
   "dependencies": {
-    "jest": "^21.2.1"
+    "jest": "^23.0"
   }
 }
