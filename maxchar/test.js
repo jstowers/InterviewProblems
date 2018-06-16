@@ -1,5 +1,7 @@
 // June 13, 2018
-// 
+
+// To run the tests in watch mode: 
+// $ jest maxchar/test.js --watch
 
 const maxChar = require('./index');
 

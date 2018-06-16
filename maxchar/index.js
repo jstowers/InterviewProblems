@@ -5,7 +5,6 @@
 /*
 	Given a string, return the character that appears the most within the string.
 
-
 	Common String Questions
 	1.  What is the most common character in a string?
 	2.  Does string A have the same characters as string B (anagram)?
@@ -16,7 +15,6 @@
 
 function maxChar(str) {
 
-	
 	let maxCharacter = '';
 	let highCount = 0;
 
@@ -54,7 +52,5 @@ function buildCharMap(array) {
 		return accum;
 	},{});
 }
-
-// console.log('maxChar = ', maxChar('test'));
 
 module.exports = maxChar;
