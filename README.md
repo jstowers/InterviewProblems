@@ -3,12 +3,14 @@
 This repository contains a collection of common interview problems:
 
 - anagrams
+- capitalize
 - chunk
 - fibonacci
 - fizzbuzz
 - islandcount
 - matchbraces
 - maxchar
+- mergesort
 - palindrome
 - queue
 - reverseint
@@ -17,11 +19,17 @@ This repository contains a collection of common interview problems:
     + depth first
     + levelwidth
 
-December 2, 2017
-- Palindrome
-- Array Chunk
+### Git Repository ###
+
+Most of the problems in this repository were taken from the Udemy course, "The Coding Interview Bootcamp," by Stephen Grider.  
+
+Grider's Github repository can be found here:
+````
+    https://github.com/StephenGrider/algocasts
+````
 
 ### Jest Testing Framework ###
+
 Each problem includes a test suite written with Jest.
 
 To run the test suite for a given problem in its directory:
@@ -29,7 +37,47 @@ To run the test suite for a given problem in its directory:
     $ jest <directory>/test.js --watch
 ````
 
-Hit Ctrl + C to stop the Jest test runner.
+Hit _Ctrl + C_ to stop the Jest test runner.
+
+
+### Debugging in Node ###
+
+To debug a problem in Node:
+
+1.  Add a debugger statement in the code:
+
+````
+    function reverse (str) {
+        let reversed = '';
+        for (let char of str) {
+            reversed = char + reversed;
+            debugger;
+        }
+        return reversed;
+    }
+````
+
+2.  Call the function within the code:
+
+````
+    reverse('Greetings!');
+````
+
+3.  In the console, run the following command:
+
+````
+    $ node inspect _<filename.js>_
+````
+
+4.  Node will execute the program in debug node, pausing execution on the first line of the file.  Type 'C' to continue with execution of code.  Execution will stop at the _debugger_ statement.
+
+5.  Type _repl_ to enter REPL mode and inspect different variables.
+
+6.  Type a variable name to see its value at that point in the execution.
+
+7.  Type _Ctrl + C_ to leave the REPL debug session.
+
+8.  When debugging is finished, remove the debugger statement and manual function call within the file.
 
 
 ### Git Rebase ###
