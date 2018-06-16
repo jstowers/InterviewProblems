@@ -19,7 +19,7 @@
 */
 
 
-/*
+
 // Option 1 - for loop
 
 function reverse (str) {
@@ -29,11 +29,11 @@ function reverse (str) {
 	for (let char of str) {
 		reversed = char + reversed;
 	}
-
+	
 	return reversed;
 
 }
-*/
+
 
 /*
 // Option 2 - recursion
@@ -78,10 +78,11 @@ function reverse (str) {
 
 
 // Option 4 - reduce
-
+/*
 function reverse (str) {
 
 	return str.split('').reduce((rev, char) => rev = char + rev, '');
 }
+*/
 
 module.exports = reverse;
