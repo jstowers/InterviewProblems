@@ -12,7 +12,6 @@
 */
 
 
-
 function maxChar(str) {
 
 	let maxCharacter = '';
