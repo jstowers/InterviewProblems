@@ -5,15 +5,21 @@
 	Given a string, return a new string with the reversed
 	order of characters.
 
-	reverse('apple')  => 'elppa'
+		reverse('apple')  => 'elppa'
 
-	reverse('hello')  => 'olleh'
+		reverse('hello')  => 'olleh'
 
-	reverse('Greetings!')  => '!sgniteerG'
+		reverse('Greetings !')  => '! sgniteerG'
 
+	Four Methods
+	1. for loop
+	2. recursion
+	3. Array.prototype.reverse()
+	4. reduce
 */
 
 
+/*
 // Option 1 - for loop
 
 function reverse (str) {
@@ -27,6 +33,7 @@ function reverse (str) {
 	return reversed;
 
 }
+*/
 
 /*
 // Option 2 - recursion
@@ -67,7 +74,14 @@ function reverse (str) {
 	return str.split('').reverse().join('');
 
 }
-
 */
+
+
+// Option 4 - reduce
+
+function reverse (str) {
+
+	return str.split('').reduce((rev, char) => rev = char + rev, '');
+}
 
 module.exports = reverse;
