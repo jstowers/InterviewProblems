@@ -4,7 +4,6 @@
 
 // Implement a queue (FIFO)
 // relying upon an array to do the heavy lifting
-
 // [nth, . . . , 4th, 3rd, 2nd, 1st]
 
 class Queue {
@@ -15,7 +14,7 @@ class Queue {
 		this.data = [];
 	}
 
-	// add data to Front of array => unshift()
+	// add data to front of array => unshift()
 	add(record) {
 		this.data.unshift(record);
 	}
