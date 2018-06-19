@@ -55,8 +55,6 @@ class Node {
 		}
 		else return null;
 	}
-
-
 }
 
 module.exports = Node;
