@@ -18,7 +18,8 @@ Make sure the step has spaces on the right side.
 			'#####'
 */
 
-
+// Case 1:  basic iteration
+/*
 function steps(n) {
 
 	// need two loops, one for the row and one for the column
@@ -39,8 +40,35 @@ function steps(n) {
 		console.log(stair);
 	}
 }
+*/
 
-console.log('steps(5) =', steps(5));
-console.log('steps(3) =', steps(3));
+/*
+	Case 2:  Recursion
+
+	Key Factors
+	1.  if (row === n), we have hit the end of our problem
+	2.  if 'stair' string length === n, we are at the end of a row
+	3.  if length of 'stair' string <= row number, then add #,
+	otherwise add a space
+*/
+
+function steps(n, row = 0, stair = '') {
+
+	if (row === n) {
+		return;
+	}
+
+	while (stair.length < n) {
+		if(stair.length <= row) {
+			stair += '#';
+		} else {
+			stair += ' ';
+		}
+	}
+
+	console.log(stair);
+	steps(n, row+1, '');
+
+}
 
 module.exports = steps;
