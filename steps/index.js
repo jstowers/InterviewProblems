@@ -67,7 +67,7 @@ function steps(n, row = 0, stair = '') {
 	}
 
 	console.log(stair);
-	steps(n, row+1, '');
+	steps(n, row+1);
 
 }
 
