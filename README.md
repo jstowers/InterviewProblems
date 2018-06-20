@@ -3,6 +3,8 @@
 This repository contains a collection of common interview problems:
 
 - anagrams
+- binary search tree (BST)
+    + validate
 - capitalize
 - chunk
 - fibonacci
@@ -14,6 +16,8 @@ This repository contains a collection of common interview problems:
 - palindrome
 - queue
 - reverseint
+- reversestring
+- steps
 - tree
     + breadth first
     + depth first
@@ -21,12 +25,13 @@ This repository contains a collection of common interview problems:
 
 ### Git Repository ###
 
-Most of the problems in this repository were taken from the Udemy course, "The Coding Interview Bootcamp," by Stephen Grider.  
+Most of the problems in this repository were taken from the Udemy course, "_The Coding Interview Bootcamp_," by Stephen Grider.  
 
-Grider's Github repository can be found here:
+Grider's Github repository, including Jest tests, can be found here:
 ````
     https://github.com/StephenGrider/algocasts
 ````
+
 
 ### Jest Testing Framework ###
 
