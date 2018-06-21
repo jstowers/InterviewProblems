@@ -80,16 +80,16 @@ function fib(n) {
 */
 
 // 	memoize()
-// 	takes a slow function and returns a faster version
+// 	receives a slow function, fn, and returns a newer, faster version
 function memoize(fn) {
 
 	// storage object that holds all previous
-	// calls to fn() and the results
+	// calls to fn() and their respective results
 	const cache = {};
 
 	// return super-charged function
 	// ...args => don't know how many arguments will be
-	// sent to this function, but take them and put in an array
+	// sent to this function, but take them and put in an array []
 	return function(...args) {
 		if (cache[args]) {
 			return cache[args];
