@@ -8,6 +8,7 @@ This repository contains a collection of common interview problems:
 - capitalize
 - chunk
 - fibonacci
+    + memoize
 - fizzbuzz
 - islandcount
 - matchbraces
@@ -15,6 +16,7 @@ This repository contains a collection of common interview problems:
 - mergesort
 - palindrome
 - queue
+- pyramid
 - reverseint
 - reversestring
 - steps
