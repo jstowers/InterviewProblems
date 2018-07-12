@@ -41,6 +41,8 @@ class Node {
 		}	
 	}
 
+	// returns the Node, if any, associated with the given value
+	// returns null if the value does not exist
 	contains(value) {
 		// does current node equal the value?
 		if ( this.value === value ) {
