@@ -25,4 +25,3 @@ test('returns 8 for the specified array', () => {
     ];
     expect(negativeNumCount(array)).toEqual(8);
 });
-
