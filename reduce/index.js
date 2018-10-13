@@ -32,6 +32,14 @@ function trips(array) {
     Use reduce to create an object that tallies the number of sitting
     and standing desks.
 
+        const array = [
+            { type: 'sitting' },
+            { type: 'standing' },
+            { type: 'sitting' },
+            { type: 'sitting' },
+            { type: 'standing' }
+        ];
+
     => { sitting: 3, standing: 2 }
 
 */
@@ -67,6 +75,5 @@ function removeDuplicates(array) {
         }     
     },[]);
 }
-
 
 module.exports = { trips, desks, removeDuplicates };
