@@ -45,4 +45,28 @@ function desks(array) {
     }, { sitting: 0, standing: 0 });
 }
 
-module.exports = { trips, desks };
+/*
+    Remove Duplicates
+
+    Use reduce to remove duplicate elements in an array.
+
+    [1, 1, 2, 3, 4, 4] => [1, 2, 3, 4]
+
+*/
+
+function removeDuplicates(array) {
+    return array.reduce((accum, ele) => {
+        let isDupe = accum.find(accumEle => {
+            return accumEle === ele;
+        });
+        if (isDupe) {
+            return accum;
+        } else {
+            accum.push(ele);
+            return accum;
+        }     
+    },[]);
+}
+
+
+module.exports = { trips, desks, removeDuplicates };
