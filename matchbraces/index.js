@@ -17,6 +17,9 @@ let chars = {
 
     if counter < 1, unbalanced -> return false
     if counter = 0, balanced -> return true
+
+    ref. Grider, ES6 Javascript: The Complete Developer's Guide
+    Section 7, Lec. 22, 'The Reduce Helper'
 */
     
 function matchBraces(str) {
