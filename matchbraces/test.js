@@ -40,6 +40,6 @@ test('returns false for {{{}}{}}{{{{{}}}}}}{', () => {
 	expect(matchBraces('{{{}}{}}{{{{{}}}}}}{')).toBe(false);
 });
 
-test('returns true for {{{{{{{{}}}}}{}}', () => {
-	expect(matchBraces('{{{{{{{{}}}}}{}}')).toBe(true);
+test('returns false for {{{{{{{{}}}}}{}}', () => {
+	expect(matchBraces('{{{{{{{{}}}}}{}}')).toBe(false);
 });
