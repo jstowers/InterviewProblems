@@ -20,8 +20,8 @@
 */
 
 function trips(array) {
-    const totalDistance = array.reduce((accum, object) => {
-        return accum += object.distance;
+    const totalDistance = array.reduce((accum, trip) => {
+        return accum += trip.distance;
     },0);
     return totalDistance;
 }

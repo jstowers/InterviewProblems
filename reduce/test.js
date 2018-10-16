@@ -33,6 +33,11 @@ describe('removeDuplicates function', () => {
         expect(typeof removeDuplicates).toEqual('function');
     });
 
+    test('handles an empty array as an input', () => {
+        const array = [];
+        expect(typeof removeDuplicates(array)).toEqual('object');
+    })
+
     test('removes duplicate values in an array', () => {
         const array =[1, 1, 2, 3, 4, 4];
         expect(removeDuplicates(array)).toEqual([1, 2, 3, 4]);
