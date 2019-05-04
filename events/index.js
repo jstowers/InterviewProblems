@@ -12,7 +12,7 @@ class Events {
 
     constructor() {
         this.events = {}
-        // keys = eventNames
+        // keys = eventNames => 'click', 'hover', 'exit', etc.
         // values = array of callback functions
     }
 
