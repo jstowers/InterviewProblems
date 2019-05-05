@@ -19,7 +19,7 @@ describe('Binary Search Tree', () => {
 		expect(node.left.left.value).toEqual(2);
 	});
 
-	test('Contains returns node with the same data', () => {
+	test('contains() returns node when value exists', () => {
 		const node = new Node(10);
 		node.insert(5);
 		node.insert(15);
@@ -32,7 +32,7 @@ describe('Binary Search Tree', () => {
 		expect(node.contains(3)).toEqual(three);
 	});
 
-	test('Contains returns null when the value does not exist', () => {
+	test('contains() returns null when value does not exist', () => {
 		const node = new Node(15);
 		node.insert(4);
 		node.insert(2);
