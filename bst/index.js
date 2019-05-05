@@ -46,16 +46,15 @@ class Node {
 	contains(value) {
 		// does current node equal the value?
 		if ( this.value === value ) {
-			console.log('this = ', this);
 			return this;
 		}
 		else if ( value < this.value && this.left ) {
-			this.left.contains(value);
+			return this.left.contains(value);
 		} 
 		else if ( value > this.value && this.right) {
-			this.right.contains(value);
+			return this.right.contains(value);
 		}
-		else return null;
+		return null;
 	}
 }
 
